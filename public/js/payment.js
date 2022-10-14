@@ -1,0 +1,1 @@
+$(document).ready((function(){$(".days").inputmask("integer",{min:0,rightAlign:!1}),$("#amount").inputmask("currency",{autoUnmask:!0,radixPoint:",",groupSeparator:".",allowMinus:!1,prefix:"R$ ",digits:2,digitsOptional:!1,rightAlign:!0,unmaskAsNumber:!0})}));
