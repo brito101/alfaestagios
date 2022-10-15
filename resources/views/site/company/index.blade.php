@@ -26,7 +26,7 @@
                             <span class="pt-5">Assista nosso vídeo de introdução</span>
                             <h2>A solução para a sua empresa!</h2>
                             <div class="play-on-area">
-                                <a href="https://www.youtube.com/watch?v=tUP5S4YdEJo" class="play-on popup-btn"><i
+                                <a href="https://www.youtube.com/watch?v=A6knS6gFwzA" class="play-on popup-btn"><i
                                         class="bx bx-play"></i></a>
                             </div>
                         </div>
