@@ -12,8 +12,8 @@
                                 <h1>Estudante</h1>
                                 <p>As melhores empresas buscam os melhores talentos na {{ env('APP_NAME') }}.</p>
                                 <div class="banner-btn">
-                                    <a href="{{ route('student') }}"
-                                        class="default-btn btn-bg-two border-radius-5">Cadastre seu
+                                    <a href="{{ route('student') }}" class="default-btn btn-bg-two border-radius-5">Cadastre
+                                        seu
                                         currículo <i class='bx bx-chevron-right'></i></a>
                                 </div>
                             </div>
@@ -48,9 +48,8 @@
                                 <h1>Seja um Franqueado</h1>
                                 <p>Já somos mais de 100 unidades espalhadas pelo Brasil em menos de 1ano.</p>
                                 <div class="banner-btn">
-                                    <a href="{{ route('franches') }}"
-                                        class="default-btn btn-bg-two border-radius-5">Conheça Agora! <i
-                                            class='bx bx-chevron-right'></i></a>
+                                    <a href="{{ route('franches') }}" class="default-btn btn-bg-two border-radius-5">Conheça
+                                        Agora! <i class='bx bx-chevron-right'></i></a>
                                 </div>
                             </div>
                         </div>
@@ -206,7 +205,7 @@
     <section class="services-area pt-100 pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Características de Negócios</h2>
+                <h2>Oportunidade de Negócio</h2>
             </div>
             <div class="row pt-45">
                 <div class="col-lg-3 col-sm-6">

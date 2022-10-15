@@ -1,3 +1,8 @@
+<!--
+@born  Oct 14, 2022
+@author  Rodrigo Brito <contato@rodrigobrito.dev.br>
+-->
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -285,12 +290,20 @@
                                     <i class="bx bxs-map"></i>
                                     <div class="content">
                                         <a href="#">
-                                            Rua 700, nº 20, Balneário Camboriú-SC
+                                            Rua Coronel Almeida, 132, Sala 01, Centro Araquari-SC
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <i class="bx bx-phone-call"></i>
+                                    <div class="content">
+                                        <a href="tel:0800 915 7000">
+                                            0800 915 7000
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="bx bx bxl-whatsapp"></i>
                                     <div class="content">
                                         <a href="tel:{{ env('TEL_SUPPORT') }}">
                                             {{ env('TEL_SUPPORT') }}
@@ -314,7 +327,7 @@
                 <div class="copy-right-text">
                     <p>
                         Copyright © 2022-{{ date('Y') }} {{ env('APP_NAME') }}. Todos os direitos reservados.
-                        <a href="https://rodrigobrito.dev.br" target="_blank">Desenvolvido por Rodrigo Brito</a>
+                        {{-- <a href="https://rodrigobrito.dev.br" target="_blank">Desenvolvido por Rodrigo Brito</a> --}}
                     </p>
                 </div>
             </div>
