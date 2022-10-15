@@ -38,22 +38,22 @@
                         <div class="top-header-social top-header-social-bg">
                             <ul>
                                 <li>
-                                    <a href="https://www.facebook.com/" target="_blank">
+                                    <a href="https://www.facebook.com/profile.php?id=100076260017396 target="_blank">
                                         <i class='bx bxl-facebook'></i>
                                     </a>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <a href="https://twitter.com/?lang=pt-BR" target="_blank">
                                         <i class='bx bxl-twitter'></i>
                                     </a>
-                                </li>
-                                <li>
+                                </li> --}}
+                                {{-- <li>
                                     <a href="https://www.linkedin.com/" target="_blank">
                                         <i class='bx bxl-linkedin-square'></i>
                                     </a>
-                                </li>
+                                </li> --}}
                                 <li>
-                                    <a href="https://www.instagram.com/" target="_blank">
+                                    <a href="https://www.instagram.com/alfaestagio/" target="_blank">
                                         <i class='bx bxl-instagram'></i>
                                     </a>
                                 </li>
@@ -191,22 +191,23 @@
                             <div class="social-link">
                                 <ul>
                                     <li>
-                                        <a href="https://www.facebook.com/" target="_blank">
+                                        <a href="https://www.facebook.com/profile.php?id=100076260017396"
+                                            target="_blank">
                                             <i class='bx bxl-facebook'></i>
                                         </a>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <a href="https://twitter.com/?lang=en" target="_blank">
                                             <i class='bx bxl-twitter'></i>
-                                        </a>
+                                        </a> --}}
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <a href="https://www.linkedin.com/" target="_blank">
                                             <i class='bx bxl-linkedin-square'></i>
                                         </a>
-                                    </li>
+                                    </li> --}}
                                     <li>
-                                        <a href="https://www.instagram.com/" target="_blank">
+                                        <a href="https://www.instagram.com/alfaestagio/" target="_blank">
                                             <i class='bx bxl-instagram'></i>
                                         </a>
                                     </li>
@@ -284,7 +285,7 @@
                                     <i class="bx bxs-map"></i>
                                     <div class="content">
                                         <a href="#">
-                                            Rua General Miguel Ferreira, nº 178. Taquara, Rio de Janeiro-RJ
+                                            Rua 700, nº 20, Balneário Camboriú-SC
                                         </a>
                                     </div>
                                 </li>

@@ -24,21 +24,21 @@
                                 <div class="content">
                                     <i class="bx bx-phone-call"></i>
                                     <h3>Telefone</h3>
-                                    <a href="tel:+55 (21) 99224-7968">(21) 99224-7968</a>
+                                    <a href="tel:+55 (47) 98884-7801">(47) 98884-7801</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="content">
                                     <i class="bx bxs-map"></i>
                                     <h3>Endereço</h3>
-                                    <span>Rua General Miguel Ferreira, nº 178. Taquara, Rio de Janeiro-RJ</span>
+                                    <span>Rua 700, nº 20, Balneário Camboriú-SC</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="content">
                                     <i class="bx bx-message"></i>
                                     <h3>E-mail</h3>
-                                    <a href="mailto:contato@rodrigobrito.dev.br">contato@rodrigobrito.dev.br </a>
+                                    <a href="mailto:contato@alfaestagios.com.br">contato@alfaestagios.com.br </a>
                                 </div>
                             </li>
                         </ul>
@@ -51,16 +51,16 @@
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label>Seu nome <span>*</span></label>
-                                        <input type="text" name="name" id="name" class="form-control" required=""
-                                            data-error="Por favor, informe seu nome" placeholder="Nome">
+                                        <input type="text" name="name" id="name" class="form-control"
+                                            required="" data-error="Por favor, informe seu nome" placeholder="Nome">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label>E-mail <span>*</span></label>
-                                        <input type="email" name="email" id="email" class="form-control" required=""
-                                            data-error="Por favor, informe seu e-mail" placeholder="E-mail">
+                                        <input type="email" name="email" id="email" class="form-control"
+                                            required="" data-error="Por favor, informe seu e-mail" placeholder="E-mail">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -109,7 +109,7 @@
     <div class="map-area">
         <div class="container-fluid m-0 p-0">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.3626653147835!2d-43.3695696!3d-22.936867100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd8ffdf598fa9%3A0xba90be8c569616bc!2sR.%20Gen.%20Miguel%20Ferreira%20-%20Taquara%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022770-331!5e0!3m2!1spt-BR!2sbr!4v1654648167940!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3555.312896132073!2d-48.63941468464159!3d-26.988650156700178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8b606c7e626d5%3A0x11b3068d3507d2bb!2sR.%20700%2C%2020%20-%20Centro%2C%20Balne%C3%A1rio%20Cambori%C3%BA%20-%20SC%2C%2088330-618!5e0!3m2!1spt-BR!2sbr!4v1665793860340!5m2!1spt-BR!2sbr"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>

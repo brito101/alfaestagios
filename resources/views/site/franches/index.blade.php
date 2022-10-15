@@ -26,12 +26,12 @@
                     <div class="about-play">
                         <img src="{{ asset('img/franchise-video.jpg') }}" alt="About Images">
                         <div class="about-play-content">
-                            <span>Assista nosso vídeo de introdução</span>
+                            {{-- <span>Assista nosso vídeo de introdução</span> --}}
                             <h2>Solução para a sua franquia!</h2>
-                            <div class="play-on-area">
+                            {{-- <div class="play-on-area">
                                 <a href="https://www.youtube.com/watch?v=tUP5S4YdEJo" class="play-on popup-btn"><i
                                         class="bx bx-play"></i></a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -135,21 +135,21 @@
                                 <div class="content">
                                     <i class="bx bx-phone-call"></i>
                                     <h3>Telefone</h3>
-                                    <a href="tel:+55 (21) 99224-7968">(21) 99224-7968</a>
+                                    <a href="tel:+55 (47) 98884-7801">(47) 98884-7801</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="content">
                                     <i class="bx bxs-map"></i>
                                     <h3>Endereço</h3>
-                                    <span>Rua General Miguel Ferreira, nº 178. Taquara, Rio de Janeiro-RJ</span>
+                                    <span>Rua 700, nº 20, Balneário Camboriú-SC</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="content">
                                     <i class="bx bx-message"></i>
                                     <h3>E-mail</h3>
-                                    <a href="mailto:contato@rodrigobrito.dev.br">contato@rodrigobrito.dev.br </a>
+                                    <a href="mailto:contato@alfaestagios.com.br">contato@alfaestagios.com.br </a>
                                 </div>
                             </li>
                         </ul>
