@@ -2181,7 +2181,7 @@
         display: none;
     }
     .mobile-nav nav .navbar-nav {
-        height: 300px;
+        height: 350px;
         overflow-y: scroll;
     }
     .side-bar-area {
@@ -2237,5 +2237,9 @@
     }
     .blog-item .blog-img2 .blog-tag span {
         font-size: 13px;
+    }
+
+    .btn-login {
+        margin-left: 20px;
     }
 }

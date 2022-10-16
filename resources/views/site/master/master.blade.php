@@ -160,11 +160,11 @@
                             </li>
 
                         </ul>
-                        <div class="nav-side d-display">
+                        <div class="nav-side">
                             <div class="nav-side-item">
                                 <div class="get-btn">
                                     <a href="{{ route('admin.home') }}"
-                                        class="default-btn btn-bg-two border-radius-5">Login
+                                        class="default-btn btn-bg-two border-radius-5 btn-login">Login
                                         <i class='bx bx-chevron-right'></i></a>
                                 </div>
                             </div>
