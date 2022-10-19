@@ -32,7 +32,7 @@
                                     alt="{{ $user->name }}" style="object-fit: cover; aspect-ratio: 1; width: 50px;">
                             </div>
                             <h3 class="profile-username text-center">{{ $user->name }}</h3>
-                            <p class="text-muted text-center">Tenho {{ $user->age() }} anos</p>
+                            <p class="text-muted text-center">Tenho {{ $user->age() }}</p>
                             <p class="text-muted text-center">Gênero: {{ $user->genre['name'] }}</p>
                         </div>
                     </div>

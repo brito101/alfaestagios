@@ -162,7 +162,11 @@ class User extends Authenticatable
     /** Aux */
     public function age()
     {
-        return Carbon::parse($this->attributes['birth'])->age;
+        if ($this->attributes['birth']) {
+            return Carbon::parse(Carbon::createFromFormat('d/m/Y', $this->attributes['birth'])->format('Y-m-d'))->age . ' anos';
+        } else {
+            return 'Idade não informada';
+        }
     }
 
     public function compatibility(Vacancy $vacancy)
