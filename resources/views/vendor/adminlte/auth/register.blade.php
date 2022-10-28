@@ -21,7 +21,7 @@
         {{-- Name field --}}
         <div class="input-group mb-3">
             <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"
-                value="{{ old('name') }}" placeholder="{{ __('adminlte::adminlte.full_name') }}" autofocus>
+                value="{{ old('name') }}" placeholder="{{ __('adminlte::adminlte.full_name') }}" autofocus required>
 
             <div class="input-group-append">
                 <div class="input-group-text">
@@ -39,7 +39,7 @@
         {{-- Email field --}}
         <div class="input-group mb-3">
             <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
-                value="{{ old('email') }}" placeholder="{{ __('adminlte::adminlte.email') }}">
+                value="{{ old('email') }}" placeholder="{{ __('adminlte::adminlte.email') }}" required>
 
             <div class="input-group-append">
                 <div class="input-group-text">
@@ -54,10 +54,47 @@
             @enderror
         </div>
 
+        {{-- City field --}}
+        <div class="input-group mb-3">
+            <input type="city" name="city" class="form-control @error('city') is-invalid @enderror"
+                value="{{ old('city') }}" placeholder="{{ __('adminlte::adminlte.city') }}" required>
+
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <span class="fas fa-map-marked {{ config('adminlte.classes_auth_icon', '') }}"></span>
+                </div>
+            </div>
+
+            @error('city')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
+
+        {{-- State field --}}
+        <div class="input-group mb-3">
+            <input type="state" name="state" class="form-control @error('state') is-invalid @enderror"
+                value="{{ old('state') }}" placeholder="{{ __('adminlte::adminlte.state') }}" required minlength="2"
+                maxlength="2">
+
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <span class="fas fa-map {{ config('adminlte.classes_auth_icon', '') }}"></span>
+                </div>
+            </div>
+
+            @error('state')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
+
         {{-- Password field --}}
         <div class="input-group mb-3">
             <input type="password" name="password" class="form-control @error('password') is-invalid @enderror"
-                placeholder="{{ __('adminlte::adminlte.password') }}">
+                placeholder="{{ __('adminlte::adminlte.password') }}" required>
 
             <div class="input-group-append">
                 <div class="input-group-text">
@@ -76,7 +113,7 @@
         <div class="input-group mb-3">
             <input type="password" name="password_confirmation"
                 class="form-control @error('password_confirmation') is-invalid @enderror"
-                placeholder="{{ __('adminlte::adminlte.retype_password') }}">
+                placeholder="{{ __('adminlte::adminlte.retype_password') }}" required>
 
             <div class="input-group-append">
                 <div class="input-group-text">

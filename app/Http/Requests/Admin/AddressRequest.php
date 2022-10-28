@@ -29,7 +29,7 @@ class AddressRequest extends FormRequest
             'number' => 'required|min:1|max:100',
             'complement' => 'nullable|max:100',
             'neighborhood' => 'nullable|max:100',
-            'state' => 'required|min:2|max:3',
+            'state' => 'required|min:2|max:2',
             'city' => 'required|min:2|max:100',
         ];
     }
