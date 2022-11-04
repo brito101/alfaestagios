@@ -56,7 +56,9 @@
             $(".content-wrapper").css("background-color", "#fff");
             $(".main-footer").remove();
             window.print();
-            window.close();
+            setTimeout(function() {
+                window.close();
+            }, 1000);
         }
     </script>
 @endsection

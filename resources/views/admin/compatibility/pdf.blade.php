@@ -70,7 +70,9 @@
         window.onload = function() {
             $(".main-footer").remove();
             window.print();
-            window.close();
+            setTimeout(function() {
+                window.close();
+            }, 1000);
         }
     </script>
 @endsection
