@@ -60,16 +60,16 @@
                     </div>
                 @endif
                 @if (Auth::user()->hasRole('Programador|Administrador|Franquiado'))
-                    <div class="col-12 col-sm-6 col-md-4">
+                    <div class="col-12 col-sm-6 col-md-3">
                         <div class="info-box">
-                            <span class="info-box-icon bg-success elevation-1"><i class="fas fa-building"></i></span>
+                            <span class="info-box-icon bg-primary elevation-1"><i class="fas fa-building"></i></span>
                             <div class="info-box-content">
                                 <span class="info-box-text">Empresas</span>
                                 <span class="info-box-number">{{ $companies->count() }}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4">
+                    <div class="col-12 col-sm-6 col-md-3">
                         <div class="info-box mb-3">
                             <span class="info-box-icon bg-teal elevation-1"><i class="fas fa-briefcase"></i></span>
                             <div class="info-box-content">
@@ -78,7 +78,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4">
+                    <div class="col-12 col-sm-6 col-md-3">
                         <div class="info-box mb-3">
                             <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
                             <div class="info-box-content">
@@ -87,10 +87,19 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="info-box mb-3">
+                            <span class="info-box-icon bg-success elevation-1"><i class="fas fa-user-check"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">Estagiários Contratados</span>
+                                <span class="info-box-number">{{ $evaluations }}</span>
+                            </div>
+                        </div>
+                    </div>
                 @endif
 
                 @if (Auth::user()->hasRole('Empresário'))
-                    <div class="col-12 col-sm-6 col-md-4">
+                    <div class="col-12 col-sm-6 col-md-3">
                         <div class="info-box mb-3">
                             <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-user-cog"></i></span>
                             <div class="info-box-content">
@@ -99,21 +108,30 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4">
+                    <div class="col-12 col-sm-6 col-md-3">
                         <div class="info-box mb-3">
                             <span class="info-box-icon bg-primary elevation-1"><i class="fas fa-briefcase"></i></span>
                             <div class="info-box-content">
                                 <span class="info-box-text">Vagas</span>
-                                <span class="info-box-number">{{ $vacancies }}</span>
+                                <span class="info-box-number">{{ $vacancies->count() }}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4">
+                    <div class="col-12 col-sm-6 col-md-3">
                         <div class="info-box mb-3">
-                            <span class="info-box-icon bg-success elevation-1"><i class="fas fa-users"></i></span>
+                            <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
                             <div class="info-box-content">
                                 <span class="info-box-text">Estagiários</span>
                                 <span class="info-box-number">{{ $trainee->count() }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="info-box mb-3">
+                            <span class="info-box-icon bg-success elevation-1"><i class="fas fa-user-check"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">Estagiários Contratados</span>
+                                <span class="info-box-number">{{ $evaluations }}</span>
                             </div>
                         </div>
                     </div>

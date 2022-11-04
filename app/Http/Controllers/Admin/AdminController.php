@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Company;
 use App\Models\Affiliation;
+use App\Models\Evaluation;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Vacancy;
@@ -33,16 +34,19 @@ class AdminController extends Controller
             $businessmen = User::role('Empresário')->where('affiliation_id', Auth::user()->affiliation_id)->count();
             $vacancies = Vacancy::whereIn('company_id', $companies->pluck('id'))->get();
             $trainee = User::role('Estagiário')->whereIn('state', $companies->pluck('state'))->orderBy('created_at', 'desc')->get();
+            $evaluations = Evaluation::whereIn('vacancy_id', $vacancies->pluck('id'))->where('status', 'Contratado')->count();
         } elseif (Auth::user()->hasRole('Empresário')) {
             $companies = Company::where('institution', 'Não')->where('id', Auth::user()->company_id)->first();
             $businessmen = User::role('Empresário')->where('company_id', Auth::user()->company_id)->count();
-            $vacancies = Vacancy::where('company_id', Auth::user()->company_id)->count();
+            $vacancies = Vacancy::where('company_id', Auth::user()->company_id)->get();
             $trainee = User::role('Estagiário')->whereIn('state', $companies->pluck('state'))->orderBy('created_at', 'desc')->get();
+            $evaluations = Evaluation::whereIn('vacancy_id', $vacancies->pluck('id'))->where('status', 'Contratado')->count();
         } else {
             $companies = Company::where('institution', 'Não')->get();
             $vacancies = Vacancy::all();
             $businessmen = User::role('Empresário')->count();
             $trainee = User::role('Estagiário')->orderBy('created_at', 'desc')->get();
+            $evaluations = Evaluation::where('status', 'Contratado')->count();
         }
 
         $posts = Post::orderBy('created_at', 'desc')->take(6)->get();
@@ -94,6 +98,7 @@ class AdminController extends Controller
             'businessmen',
             'trainee',
             'vacancies',
+            'evaluations',
             'posts',
             'onlineUsers',
             'access',
