@@ -196,7 +196,8 @@
                         <div class="section-title">
                             <h2>Como funciona?</h2>
                             <p>Após o alinhamento do Perfil escolhido pela empresa a vaga é aberta pela empresa.</p>
-                            <p>A estágioPremium seleciona o candidato (podendo aplicar testes e/ou entrevistas) para alinhar
+                            <p>A {{ env('APP_NAME') }} seleciona o candidato (podendo aplicar testes e/ou entrevistas) para
+                                alinhar
                                 o perfil exato que a empresa PRECISA.</p>
                             <p>Após a Confirmação pela empresa a estágioPremium através do franqueado faz:</p>
                             <div class="row">
