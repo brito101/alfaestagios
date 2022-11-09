@@ -199,7 +199,7 @@
                             <p>A {{ env('APP_NAME') }} seleciona o candidato (podendo aplicar testes e/ou entrevistas) para
                                 alinhar
                                 o perfil exato que a empresa PRECISA.</p>
-                            <p>Após a Confirmação pela empresa a estágioPremium através do franqueado faz:</p>
+                            <p>Após a confirmação pela empresa a {{ env('APP_NAME') }} através do franqueado faz:</p>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <ul class="about-list text-start">
