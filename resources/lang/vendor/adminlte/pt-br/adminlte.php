@@ -27,4 +27,5 @@ return [
     'confirm_password_message'    => 'Por favor, confirme sua senha para continuar.',
     'city' => 'Cidade em que você reside',
     'state' => 'Estado em que você reside (UF)',
+    'cell' => 'Seu telefone celular',
 ];

@@ -54,6 +54,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'city' => ['required', 'string', 'min:2', 'max:100'],
             'state' => ['required', 'string', 'min:2', 'max:2'],
+            'cell' => ['required', 'min:8', 'max:25',],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -71,6 +72,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'city' => \ucfirst(\strtolower($data['city'])),
             'state' => \strtoupper($data['state']),
+            'cell' => $data['cell'],
             'password' => Hash::make($data['password']),
         ]);
 

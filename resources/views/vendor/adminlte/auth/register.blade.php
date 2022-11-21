@@ -91,6 +91,24 @@
             @enderror
         </div>
 
+        {{-- Telephone field --}}
+        <div class="input-group mb-3">
+            <input type="text" name="cell" class="form-control @error('cell ') is-invalid @enderror"
+                value="{{ old('cell') }}" id="cell" placeholder="{{ __('adminlte::adminlte.cell') }}" required>
+
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <span class="fas fa-phone {{ config('adminlte.classes_auth_icon', '') }}"></span>
+                </div>
+            </div>
+
+            @error('cell')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
+
         {{-- Password field --}}
         <div class="input-group mb-3">
             <input type="password" name="password" class="form-control @error('password') is-invalid @enderror"
@@ -144,3 +162,8 @@
         </a>
     </p>
 @stop
+
+@section('custom_js')
+    <script src="{{ asset('vendor/jquery/jquery.inputmask.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/phone.js') }}"></script>
+@endsection
