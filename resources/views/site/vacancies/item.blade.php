@@ -131,7 +131,7 @@
                                 Conta<i class='bx bx-chevron-right'></i></a>
                         </div>
                         <div class="banner-btn">
-                            <a href="{{ route('admin.documents.edit') }}"
+                            <a href="{{ route('admin.curriculum.show') }}"
                                 class="default-btn btn-bg-two border-radius-5">Cadastre seu
                                 currículo <i class='bx bx-chevron-right'></i></a>
                         </div>
