@@ -51,13 +51,61 @@ class TraineeController extends Controller
         if (Auth::user()->hasRole('Franquiado')) {
             $companies = Company::where('affiliation_id', Auth::user()->affiliation_id)->get();
             $trainees = User::role('Estagiário')
-                ->where('name', 'like', '%' . $request['name'] . '%')->whereIn('id', $academics)->whereIn('state', $companies->pluck('state'))->orderBy('created_at', 'desc')->paginate(1000000);
+                ->where(function ($query) use ($request, $academics) {
+                    if ($request->name) {
+                        $query->where('name', 'like', '%' . $request['name'] . '%');
+                    }
+                    if ($request->city) {
+                        $query->where('city', $request->city);
+                    }
+                    if ($request->state) {
+                        $query->where('state', $request->state);
+                    }
+                    if ($request->academics) {
+                        $query->whereIn('id', $academics);
+                    }
+                })
+                ->whereIn('state', $companies->pluck('state'))
+                ->orderBy('created_at', 'desc')
+                ->get();
         } elseif (Auth::user()->hasRole('Empresário')) {
             $companies = Company::where('id', Auth::user()->company_id)->get();
-            $trainees = User::role('Estagiário')->where('name', 'like', '%' . $request['name'] . '%')->whereIn('id', $academics)->whereIn('state', $companies->pluck('state'))->orderBy('created_at', 'desc')->paginate(9);
+            $trainees = User::role('Estagiário')
+                ->where(function ($query) use ($request, $academics) {
+                    if ($request->name) {
+                        $query->where('name', 'like', '%' . $request['name'] . '%');
+                    }
+                    if ($request->city) {
+                        $query->where('city', $request->city);
+                    }
+                    if ($request->state) {
+                        $query->where('state', $request->state);
+                    }
+                    if ($request->academics) {
+                        $query->whereIn('id', $academics);
+                    }
+                })
+                ->whereIn('state', $companies->pluck('state'))
+                ->orderBy('created_at', 'desc')
+                ->get();
         } else {
             $trainees = User::role('Estagiário')
-                ->where('name', 'like', '%' . $request['name'] . '%')->orderBy('created_at', 'desc')->whereIn('id', $academics)->paginate(1000000);
+                ->where(function ($query) use ($request, $academics) {
+                    if ($request->name) {
+                        $query->where('name', 'like', '%' . $request['name'] . '%');
+                    }
+                    if ($request->city) {
+                        $query->where('city', $request->city);
+                    }
+                    if ($request->state) {
+                        $query->where('state', $request->state);
+                    }
+                    if ($request->academics) {
+                        $query->whereIn('id', $academics);
+                    }
+                })
+                ->orderBy('created_at', 'desc')
+                ->get();
         }
 
         return view('admin.trainees.index', compact('trainees'));

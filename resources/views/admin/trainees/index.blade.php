@@ -27,13 +27,25 @@
             @csrf
             <div class="card-body pb-0">
                 <div class="d-flex flex-wrap justify-content-start">
-                    <div class="col-12 col-md-6 form-group px-0 pr-2">
+                    <div class="col-12 col-md-3 form-group px-0 pr-2">
                         <label for="name">Nome</label>
                         <input type="text" id="name" name="name" class="form-control"
                             placeholder="Nome do Estagiário" value="{{ old('name') }}">
                     </div>
 
-                    <div class="col-12 col-md-6 form-group px-0 pl-2">
+                    <div class="col-12 col-md-3 form-group px-0 px-2">
+                        <label for="city">Cidade</label>
+                        <input type="text" id="city" name="city" class="form-control" placeholder="Cidade"
+                            value="{{ old('city') }}">
+                    </div>
+
+                    <div class="col-12 col-md-3 form-group px-0 px-2">
+                        <label for="state">Estado</label>
+                        <input type="text" id="state" name="state" class="form-control" placeholder="UF"
+                            value="{{ old('state') }}">
+                    </div>
+
+                    <div class="col-12 col-md-3 form-group px-0 pl-2">
                         <label for="academics">Formação Acadêmica</label>
                         <input type="text" id="academics" name="academics" class="form-control"
                             placeholder="nome da formação acadêmica" value="{{ old('academics') }}">
@@ -104,15 +116,22 @@
                 </div>
             </div>
 
-            <div class="card-footer">
-                <nav aria-label="Contacts Page Navigation">
-                    <ul class="pagination justify-content-center m-0">
-                        {{ $trainees->links() }}
-                    </ul>
-                </nav>
-            </div>
+            @if ($trainees instanceof \Illuminate\Pagination\LengthAwarePaginator)
+                <div class="card-footer">
+                    <nav aria-label="Contacts Page Navigation">
+                        <ul class="pagination justify-content-center m-0">
+                            {{ $trainees->links() }}
+                        </ul>
+                    </nav>
+                </div>
+            @endif
 
         </div>
 
     </section>
+@endsection
+
+@section('custom_js')
+    <script src="{{ asset('vendor/jquery/jquery.inputmask.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/address.js') }}"></script>
 @endsection
